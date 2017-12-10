@@ -1,7 +1,9 @@
 project(writer)
 
 # 编译器选项
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+if (WIN32)
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+endif()
 
 # 源文件
 file(GLOB WRITER_SROUCE
